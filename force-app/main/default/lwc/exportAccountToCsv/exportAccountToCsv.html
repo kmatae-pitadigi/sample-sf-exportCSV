@@ -1,0 +1,25 @@
+<template>
+        <!-- PAGE HEADER -->
+        <div class="slds-page-header" role="banner">
+            <div class="slds-grid">
+                <div class="slds-col slds-has-flexi-truncate">
+                    <!-- HEADING AREA -->
+                    <p class="slds-text-title_caps slds-line-height_reset">サンプル</p>
+                    <h1 class="slds-page-header__title slds-truncate" title="取引先エクスポート">取引先エクスポート</h1>
+                    <!-- / HEADING AREA -->
+                </div>
+                <div class="slds-col slds-no-flex slds-grid slds-align-top">
+                    <lightning-button label="エクスポート" onclick={handleExportClick}></lightning-button>
+                </div>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col">
+                <lightning-datatable
+                    key-field="Id"
+                    data={record}
+                    columns={columns}>
+                </lightning-datatable>
+            </div>
+        </div>
+    </template>
